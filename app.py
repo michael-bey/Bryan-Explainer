@@ -13,13 +13,15 @@ def slackpedia():
     result = get_query_result(query)
     
     #resp = jsonify(text="result", response_type="in_channel")
-    data = {"text": result, "response_type": "in_channel"}
-    #ret = '{"text":result,"response_type":"in_channel"}'
-    return flask.jsonify(data)
+    #data = {"text": result, "response_type": "in_channel"}
+    
+    ret = '{"text":"'+result+'","response_type":"in_channel"}'
+    
+#b'{"Machine Name":"'+hostname+'"}', None, True)
 
-    #resp = Response(response=ret,
-                 #   status=200,
-                    #mimetype="application/json")
+    resp = Response(response=ret,
+                    status=200,
+                    mimetype="application/json")
 
     #return Response(result, content_type='charset=utf-8; text/plain')
                 #"text":"Partly cloudy today and tomorrow"
@@ -42,7 +44,7 @@ def get_query_result(query):
 
 
 def get_found_response(result):
-    header_text = ":satisfied: Found it!\n {}"
+    header_text = ":satisfied: Hey Bryan! @silberfuchs Found it!\n {}"
 
     return header_text.format(result)
 
