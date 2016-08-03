@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, Response
+from flask import Flask, request, Response, jsonify
 import wikipedia
 
 app = Flask(__name__)
@@ -11,8 +11,11 @@ SLACKPEDIA_BOT_DEBUG = False
 def slackpedia():
     query = request.values.get('text')
     result = get_query_result(query)
+    
+    resp = jsonify(text=result, response_type=in_channel)
 
-    return Response(result, content_type='charset=utf-8; text/plain')
+    #return Response(result, content_type='charset=utf-8; text/plain')
+    return Response(response=resp, status=200, mimetype="application/json")
 
 
 def get_query_result(query):
