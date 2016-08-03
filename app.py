@@ -12,10 +12,10 @@ def slackpedia():
     query = request.values.get('text')
     result = get_query_result(query)
     
-    resp = jsonify(text=result, response_type="in_channel")
+    resp = jsonify(text="result", response_type="in_channel")
 
     #return Response(result, content_type='charset=utf-8; text/plain')
-    return Response(response=resp, status=200, mimetype="application/json")
+    return Response(resp)
 
 
 def get_query_result(query):
