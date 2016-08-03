@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, Response, jsonify
 import wikipedia
+import json
 
 app = Flask(__name__)
 
