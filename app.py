@@ -12,10 +12,17 @@ def slackpedia():
     query = request.values.get('text')
     result = get_query_result(query)
     
-    resp = jsonify(text="result", response_type="in_channel")
+    #resp = jsonify(text="result", response_type="in_channel")
+    
+    ret = '{"text":"Partly cloudy today and tomorrow"}'
+
+    resp = Response(response=ret,
+                    status=200,
+                    mimetype="application/json")
 
     #return Response(result, content_type='charset=utf-8; text/plain')
-    return Response(resp)
+                #"text":"Partly cloudy today and tomorrow"
+    return resp
 
 
 def get_query_result(query):
