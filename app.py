@@ -15,11 +15,11 @@ def slackpedia():
     #resp = jsonify(text="result", response_type="in_channel")
     data = {"text": result, "response_type": "in_channel"}
     #ret = '{"text":result,"response_type":"in_channel"}'
-    ret = flask.jsonify(data)
+    return flask.jsonify(data)
 
-    resp = Response(response=ret,
-                    status=200,
-                    mimetype="application/json")
+    #resp = Response(response=ret,
+                 #   status=200,
+                    #mimetype="application/json")
 
     #return Response(result, content_type='charset=utf-8; text/plain')
                 #"text":"Partly cloudy today and tomorrow"
