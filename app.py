@@ -16,11 +16,10 @@ def slackpedia():
     #resp = jsonify(text="result", response_type="in_channel")
     #data = {"text": result, "response_type": "in_channel"}
     
-    ret = '{"text":"'+result+'","response_type":"in_channel"}'
-    
-#b'{"Machine Name":"'+hostname+'"}', None, True)
+    ret = {'text':result,'response_type':"in_channel"}
+    data = json.dumps(ret)
 
-    resp = Response(response=ret,
+    resp = Response(response=data,
                     status=200,
                     mimetype="application/json")
 
