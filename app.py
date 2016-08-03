@@ -44,7 +44,7 @@ def get_query_result(query):
 
 
 def get_found_response(result):
-    header_text = ":satisfied: Hey Bryan! @silberfuchs Found it!\n {}"
+    header_text = ":satisfied: Hey Bryan! @silburfuchs\n {}"
 
     return header_text.format(result)
 
