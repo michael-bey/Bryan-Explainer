@@ -14,7 +14,7 @@ def slackpedia():
     
     #resp = jsonify(text="result", response_type="in_channel")
     
-    ret = '{"text":"Partly cloudy today and tomorrow"}'
+    ret = '{"text":"Partly cloudy today and tomorrow","response_type":"in_channel"}'
 
     resp = Response(response=ret,
                     status=200,
