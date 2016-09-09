@@ -8,7 +8,7 @@ Quick way to search for wikipedia's definition, now in slack! This buddy will te
 
 ## Usage
 
-From any Slack channel, just type `/slackpedia [search term]`. The definition will be visible only to you.
+From any Slack channel, just type `/explaintobryan [search term]`. This will show the definition to the entire channel and tag the user of your choice (Bryan). Make sure you use the actual Slack ID instead of their username.
 
 ## Integrate with your team
 
@@ -16,8 +16,8 @@ From any Slack channel, just type `/slackpedia [search term]`. The definition wi
 2. Click on **Configure Integrations**.
 3. Scroll all the way down to **DIY Integrations & Customizations section**.
 4. Click on **Add** next to **Slash Commands**.
-  - Command: `/slackpedia`
-  - URL: `https://slackpedia.herokuapp.com/slackpedia`
+  - Command: `/explaintobryan`
+  - URL: `https://yourdomain.herokuapp.com/slackpedia`
   - Method: `POST`
   - For the **Autocomplete help text**, check to show the command in autocomplete list.
     - Description: `Quick way to search for wikipedia's definition.`
@@ -30,4 +30,4 @@ From any Slack channel, just type `/slackpedia [search term]`. The definition wi
 
 ## Contributing
 
-- Please use the [issue tracker](https://github.com/oskarcieslik/Slackpedia/issues) to report any bugs or file feature requests.
+- Please use the [issue tracker](https://github.com/benichmt1/Bryan-Explainer/issues) to report any bugs or file feature requests.
